@@ -32,5 +32,31 @@ def main():
     # access item by index
     print("Rating of Cookie Butter:", cookies["Cookie Butter"])
     
+    # DataFrame is like a 2D array or special dictionary
+    cookies_DF = pd.DataFrame(cookies, columns=["Rating"])
+    print(cookies_DF)
+    
+    # add a column to the DataFrame
+    cookies_DF["Allergens"] = [True, True, True, True, True, True]
+    print(cookies_DF)
+    
+    # could also do it the long way and make another dict
+    cookies_DF["Sweetness"] = {"Chocolate Chip": 8, "Oatmeal Raisin": 6, "Snickerdoodle": 5, "Ginger Snap": 5, "Cookie Butter": 8}
+    print(cookies_DF)
+    
+    # DATA SELECTION
+    # index using explicit index
+    data2 = pd.Series(["G", "r", "a", "c", "i", "e"], index=[7, 18, 1, 3, 9, 5])
+    print(data2[7])
+    
+    # NOTE: all are inclusive of final parameter
+    print(data2[1:5]) # prints out the actual index of 1:5 not explicit
+    print(data2[2:7]) # use actual index to call correct indices
+    
+    # slicing des not give expected output with explicit index b/c uses implict index always 
+    
+    # instead need to use the LOC attribute to slice w/ explicit
+    print(data2.loc[1:5])
+    
 if __name__ == "__main__":
     main()
