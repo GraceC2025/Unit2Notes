@@ -30,4 +30,12 @@ plt.xlim(-1, 11)
 plt.ylim(-1.5, 1.5)
 plt.axis('tight') # change axis to fit plot better
 
+# add labels
+plt.title('Sine Wave')
+plt.xlabel('x')
+plt.ylabel('sin(x)')
+
+# add legend
+plt.legend()
+
 plt.savefig('lineplot3.png')
