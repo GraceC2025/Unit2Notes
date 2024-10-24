@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.datasets import load_iris
 
 # set style
-plt.style.use('ggplot')
+plt.style.use('bmh')
 
 # generate data points
 rng = np.random.default_rng(0)
